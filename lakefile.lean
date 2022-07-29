@@ -2,7 +2,7 @@ import Lake
 open Lake DSL
 
 package cloud_test {
-  -- add package configuration options here
+  preferReleaseBuild := true
 }
 
 lean_lib CloudTest {
