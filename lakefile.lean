@@ -9,7 +9,7 @@ lean_lib CloudTest {
   -- add library configuration options here
 }
 
-@[defaultTarget]
+@[default_target]
 lean_exe cloud_test {
   root := `Main
 }
