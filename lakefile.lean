@@ -2,8 +2,9 @@ import Lake
 open Lake DSL
 
 package cloud_test where
-  preferReleaseBuild := true
   precompileModules := true
+  preferReleaseBuild := true
+  releaseRepo := "https://github.com/tydeu/lake-cloud-test"
 
 lean_lib CloudTest
 

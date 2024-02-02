@@ -2,10 +2,11 @@
 set -euxo pipefail
 
 TAG="$1"
+LAKE="${LAKE:-lake}"
 
 rm -rf .lake
-lake update -R -Ktag="$TAG"
-lake build @cloud_test:release
-lake build CloudTest | diff /dev/null -
-lake build
-lake exe test
+$LAKE update -R -Ktag="$TAG"
+$LAKE build @cloud_test:release
+$LAKE build CloudTest | diff /dev/null -
+$LAKE build
+$LAKE exe test
